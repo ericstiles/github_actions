@@ -1,6 +1,6 @@
 name: Do Some Math Again
 
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
   job_1:
