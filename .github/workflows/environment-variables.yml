@@ -1,4 +1,4 @@
-name: This is an example
+name: List Environment Variables
 
 on: [ pull_request, workflow_dispatch ]
 
