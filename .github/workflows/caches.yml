@@ -1,4 +1,4 @@
-name: Do Some Math Again
+name: Math From workflow_dispatch
 
 on: [workflow_dispatch]
 
