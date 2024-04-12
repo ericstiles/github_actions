@@ -1,9 +1,13 @@
-name: Run On Branch Create
-run-name: ${{ github.actor }} is creating branch
-on:
-  create
+name: post create
+run-name: ${{ github.actor }} is running post-create
+needs:
+  create_job_1
 jobs:
   create_job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+  create_job_2:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
