@@ -9,27 +9,10 @@ on:
         required: true
         type: string
 
-name: Java CI with Maven
-
-env:
-  NAME: 'My Action'
-
-on:
-  push:
-    branches: [ "main" ]
-
 jobs:
-  build:
-    env:
-      NAME: 'My Action 2'
-
+  print-username:
     runs-on: ubuntu-latest
 
-      - name: Print name
-        run: echo "$NAME"
-        env:
-          NAME: 'My Action 3'
-
-
-
-
+    steps:
+      - name: Print the username
+        run: echo The username is ${{ inputs.username }}
