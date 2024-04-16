@@ -24,7 +24,7 @@ jobs:
         run: |
           echo $GITHUB_EVENT_CONTEXT
   print_github_context:
-    needs: print_github_event_context
+    needs: [print_github_event_context,print-username]
     runs-on: ubuntu-latest
     env:
       GITHUB_CONTEXT: ${{ toJSON(github) }}
