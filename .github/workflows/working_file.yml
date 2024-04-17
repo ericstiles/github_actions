@@ -63,3 +63,21 @@ jobs:
       - name: Print the third
         run: |
           echo "third"
+
+  print_1a:
+    runs-on: ubuntu-latest
+    #    env:
+    #      CONTEXT: ${{ toJSON(github.env) }}
+    steps:
+      - name: Print the 1a
+        run: |
+          echo "1a"
+  print_fourth:
+    needs: [print_1a,print_third]
+    runs-on: ubuntu-latest
+    #    env:
+    #      CONTEXT: ${{ toJSON(github.env) }}
+    steps:
+      - name: Print the fourth
+        run: |
+          echo "fourth"
