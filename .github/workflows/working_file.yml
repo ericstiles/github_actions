@@ -39,7 +39,7 @@ jobs:
   print_env_context:
     needs: [print_github_event_context,print_github_context]
     env:
-      CONTEXT: ${{ toJSON(env) }}
+      CONTEXT: ${{ toJSON(vars) }}
     steps:
       - name: Print the env
         run: |
