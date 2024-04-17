@@ -16,6 +16,10 @@ jobs:
           path: cache-folder
           key: ${{ runner.os }}-cache-key
 
+      - name: Delete cache if, skip if doesn't exists
+        if: steps.cache-action.outputs.cache-hit == 'true'
+        run: rm -rf cache-folder/hello
+
       - name: Generate the cache, skip if exists
         if: steps.cache-action.outputs.cache-hit != 'true'
         run: |
