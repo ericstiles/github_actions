@@ -36,3 +36,11 @@ jobs:
       - name: Print the github
         run: |
           echo $GITHUB_CONTEXT
+  print_env_context:
+    needs: [print_github_event_context,print_github_context]
+    env:
+      CONTEXT: ${{ toJSON(env) }}
+    steps:
+      - name: Print the env
+        run: |
+          echo $CONTEXT
