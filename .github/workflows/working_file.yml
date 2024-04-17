@@ -54,3 +54,12 @@ jobs:
       - name: Print the env
         run: |
           echo $CONTEXT
+  print_third:
+    needs: [print_env_context,print_github_context]
+    runs-on: ubuntu-latest
+    env:
+#      CONTEXT: ${{ toJSON(github.env) }}
+    steps:
+      - name: Print the third
+        run: |
+          echo "third"
