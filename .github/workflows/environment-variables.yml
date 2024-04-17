@@ -8,6 +8,7 @@ on:
         default: 'ets'
         required: true
         type: string
+  push:
 
 jobs:
   print-username:
