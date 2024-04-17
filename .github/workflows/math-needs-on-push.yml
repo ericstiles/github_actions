@@ -1,4 +1,4 @@
-name: Do Some Math
+name: Math on push
 
 on: [push]
 
