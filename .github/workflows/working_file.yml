@@ -16,7 +16,6 @@ on:
 jobs:
   print-username:
     runs-on: ubuntu-latest
-    needs: display_results
     steps:
       - name: Print the username
         run: echo The username is ${{ inputs.username }}
