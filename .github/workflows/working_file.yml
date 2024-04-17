@@ -57,7 +57,7 @@ jobs:
   print_third:
     needs: [print_env_context,print_github_context]
     runs-on: ubuntu-latest
-    env:
+#    env:
 #      CONTEXT: ${{ toJSON(github.env) }}
     steps:
       - name: Print the third
