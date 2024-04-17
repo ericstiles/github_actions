@@ -3,7 +3,7 @@ name: Do Some Math
 on: [push]
 
 jobs:
-  job_1:
+  add_3_and_7:
     name: Add 3 and 7
     runs-on: ubuntu-latest
     steps:
@@ -16,9 +16,9 @@ jobs:
           name: homework_pre
           path: math-homework.txt
 
-  job_2:
+  multipy_by_9:
     name: Multiply by 9
-    needs: job_1
+    needs: add_3_and_7
     runs-on: windows-latest
     steps:
       - name: Download math result for job 1
@@ -35,9 +35,9 @@ jobs:
           name: homework_final
           path: math-homework.txt
 
-  job_3:
+  display_results:
     name: Display results
-    needs: job_2
+    needs: multipy_by_9
     runs-on: macOS-latest
     steps:
       - name: Download math result for job 2
