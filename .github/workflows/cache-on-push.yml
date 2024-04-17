@@ -16,7 +16,7 @@ jobs:
           path: cache-folder
           key: ${{ runner.os }}-cache-key
 
-      - name: Use or generate the cache
+      - name: Use or generate the cache, skip if exists
         if: steps.cache-action.outputs.cache-hit != 'true'
         run: mkdir cache-folder && touch cache-folder/hello
 
