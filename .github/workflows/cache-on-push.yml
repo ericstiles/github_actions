@@ -18,7 +18,9 @@ jobs:
 
       - name: Generate the cache, skip if exists
         if: steps.cache-action.outputs.cache-hit != 'true'
-        run: mkdir cache-folder && touch cache-folder/hello
-
+        run: |
+          mkdir cache-folder && touch cache-folder/hello && echo "$(date)" > hello
       - name: Verify we have our cached file
-        run: ls cache-folder
+        run: |
+          ls cache-folder
+          cat hello
