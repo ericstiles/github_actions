@@ -1,4 +1,4 @@
-name: Math From workflow_dispatch
+name: workflow_dispatch in subdirectory
 
 # Controls when the workflow will run
 on:
