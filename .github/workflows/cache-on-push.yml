@@ -23,4 +23,4 @@ jobs:
       - name: Verify we have our cached file
         run: |
           ls cache-folder
-          cat hello
+          cat cache-folder/hello
