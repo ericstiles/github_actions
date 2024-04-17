@@ -49,7 +49,7 @@ jobs:
     needs: [print_github_event_context,print_vars_context]
     runs-on: ubuntu-latest
     env:
-      CONTEXT: ${{ toJSON(env) }}
+      CONTEXT: ${{ toJSON(github.env) }}
     steps:
       - name: Print the env
         run: |
