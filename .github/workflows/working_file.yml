@@ -37,10 +37,10 @@ jobs:
         run: |
           echo $GITHUB_CONTEXT
   print_vars_context:
-    needs: [print_github_event_context,print_github_context]
+#    needs: [print_github_event_context,print_github_context]
     runs-on: ubuntu-latest
     env:
-      CONTEXT: ${{ toJSON(vars) }}
+      CONTEXT: ${{ toJSON(github.vars) }}
     steps:
       - name: Print the vars
         run: |
