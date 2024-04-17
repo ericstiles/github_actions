@@ -1,4 +1,4 @@
-name: Math From workflow_dispatch
+name: Simple echo from workflow_dispatch
 
 # Controls when the workflow will run
 on:

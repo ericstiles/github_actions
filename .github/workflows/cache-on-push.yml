@@ -24,5 +24,3 @@ jobs:
         if: steps.cache-action.outputs.cache-hit == 'true'
         run: |
           ls -alh cache-folder
-        
-
