@@ -8,8 +8,11 @@ on:
         default: 'ets'
         required: true
         type: string
-  push:
-
+#  push:
+  workflow_run:
+    workflows: [math-needs-on-push]
+    types:
+      - completed
 jobs:
   print-username:
     runs-on: ubuntu-latest

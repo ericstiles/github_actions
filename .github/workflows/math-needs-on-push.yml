@@ -16,7 +16,7 @@ jobs:
           name: homework_pre
           path: math-homework.txt
 
-  multipy_by_9:
+  multiply_by_9:
     name: Multiply by 9
     needs: add_3_and_7
     runs-on: windows-latest
@@ -37,7 +37,7 @@ jobs:
 
   display_results:
     name: Display results
-    needs: multipy_by_9
+    needs: multiply_by_9
     runs-on: macOS-latest
     steps:
       - name: Download math result for job 2
