@@ -1,0 +1,35 @@
+name: Manual Trigger Workflow with username
+#get username information
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'select user'
+        default: 'ets'
+        required: true
+        type: string
+  push:
+
+jobs:
+  print-username:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the username
+        run: echo The username is ${{ inputs.username }}
+  print_github_event_context:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_EVENT_CONTEXT: ${{ toJSON(github.event) }}
+    steps:
+      - name: Print the github.event
+        run: |
+          echo $GITHUB_EVENT_CONTEXT
+  print_github_context:
+    needs: [print_github_event_context,print-username]
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_CONTEXT: ${{ toJSON(github) }}
+    steps:
+      - name: Print the github
+        run: |
+          echo $GITHUB_CONTEXT
