@@ -10,7 +10,7 @@ on:
         type: string
 #  push:
   workflow_run:
-    workflows: [math-needs-on-push]
+    workflows: [math-needs-on-push, Math on push]
     types:
       - completed
 jobs:
