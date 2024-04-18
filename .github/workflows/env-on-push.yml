@@ -25,7 +25,8 @@ jobs:
       - name: Dump strategy context
         env:
           STRATEGY_CONTEXT: ${{ toJson(strategy) }}
-        run: echo "$STRATEGY_CONTEXT"
+      - name: Dump github.repository
+        run: echo ${{ github.repository }}
       - name: Dump matrix context
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
