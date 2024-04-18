@@ -8,7 +8,7 @@ on:
         default: 'ets'
         required: true
         type: string
-#  push:
+  push:
   workflow_run:
     workflows: [math-needs-on-push, Math on push]
     types:
