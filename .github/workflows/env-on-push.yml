@@ -1,6 +1,6 @@
-name: This is an example
+name: EV Dump
 
-on: [pull_request]
+on: push
 
 jobs:
   one:
