@@ -1,7 +1,5 @@
 name: JS Actions
 
-name: Simple echo from workflow_dispatch
-
 # Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
