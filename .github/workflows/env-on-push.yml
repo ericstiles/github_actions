@@ -25,6 +25,7 @@ jobs:
       - name: Dump strategy context
         env:
           STRATEGY_CONTEXT: ${{ toJson(strategy) }}
+        run: echo $STRATEGY_CONTEXT
       - name: Dump github.repository
         run: echo ${{ github.repository }}
       - name: Dump matrix context
@@ -34,6 +35,7 @@ jobs:
 
       - name: Show default environment variables
         run: |
+          echo ${{ github.repository }}
           echo "The job_id is: $GITHUB_JOB"   # reference the default environment variables
           echo "The id of this action is: $GITHUB_ACTION"   # reference the default environment variables
           echo "The run id is: $GITHUB_RUN_ID"
@@ -44,3 +46,5 @@ jobs:
           echo "-----------"
           echo $GITHUB_ENV
           cat $GITHUB_ENV
+          echo "-----------"
+          echo ${{ github.repository }}
