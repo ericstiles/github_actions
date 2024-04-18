@@ -1,7 +1,7 @@
 name: EV Dump
-
 on: push
-
+env:
+  ETS: eric
 jobs:
   dump_values:
     runs-on: ubuntu-latest
