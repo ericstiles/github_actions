@@ -40,3 +40,5 @@ jobs:
           echo "GitHub SHA: $GITHUB_SHA"
           echo "-----------"
           env && sort
+          echo "-----------"
+          cat $GITHUB_ENV
