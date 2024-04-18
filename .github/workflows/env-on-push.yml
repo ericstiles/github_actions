@@ -42,7 +42,7 @@ jobs:
           echo "The GitHub Actor's username is: $GITHUB_ACTOR"
           echo "GitHub SHA: $GITHUB_SHA"
           echo "-----------"
-          env && sort
+          env | sort
           echo "-----------"
           echo $GITHUB_ENV
           cat $GITHUB_ENV
