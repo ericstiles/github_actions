@@ -14,7 +14,7 @@ async function dump(){
       console.log(`${key}: ${process.env[key]}`);
     });
 }
-
 run();
-dump();
 
+
+dump();
