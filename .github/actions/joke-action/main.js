@@ -9,9 +9,12 @@ async function run() {
 
 async function dump(){
     console.log("getting ev");
-    for (let key in process.env) {
+    const keys = Object.keys(process.env).sort();
+    keys.forEach(key => {
       console.log(`${key}: ${process.env[key]}`);
-    }
+    });
 }
+
 run();
 dump();
+
