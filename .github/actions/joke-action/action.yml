@@ -2,6 +2,18 @@ name: "my joke action"
 
 description: "use an external API to retrieve and display a joke"
 
+author: "ETS"
+
 runs:
   using: "node16"
   main: "main.js"
+
+inputs:
+  name:
+    description: 'The name to greet'
+    required: true
+    default: 'World'
+  loud:
+    description: 'Whether to greet loudly or not'
+    required: false
+    default: false
