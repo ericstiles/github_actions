@@ -7,4 +7,11 @@ async function run() {
   core.setOutput("joke-output", joke);
 }
 
+async function dump(){
+    console.log("getting ev");
+    for (let key in process.env) {
+      console.log(`${key}: ${process.env[key]}`);
+    }
+}
 run();
+dump();
